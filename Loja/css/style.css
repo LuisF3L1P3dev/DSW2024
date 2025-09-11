@@ -12,8 +12,8 @@
 
 
 *{
-    margin: 0 !important;
-    border: 0 !important;
+    margin: 0 ;
+    border: 0 ;
     box-sizing: border-box !important;
 }
 
@@ -31,7 +31,6 @@ body{
 }
 /* ________HEADER________ */
 header{
-    /* background-color: #FFFDF0; */
     background-color: var(--pink_light);
     align-items: center;
     text-align: center;
