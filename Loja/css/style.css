@@ -14,7 +14,7 @@
 *{
     margin: 0 ;
     border: 0 ;
-    box-sizing: border-box !important;
+    box-sizing: border-box;
 }
 
 a{
@@ -34,7 +34,7 @@ header{
     background-color: var(--pink_light);
     align-items: center;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.20) 0px 0px 16px 0px;
+    box-shadow: rgba(0, 0, 0, 0.20) 0px 0px 30px 0px;
 }
 
 .header1{
@@ -135,10 +135,9 @@ header{
 /* ________CARROSSEL_______ */
 
 .carousel-inner img{
-    width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 19 / 9;
     object-fit: cover;   /* corta a imagem proporcionalmente */
-    object-position: center; /* garante que o corte seja centralizado */
+    object-position: initial; /* garante que o corte seja centralizado */
 }
 
 /* Reponsividade menu */
@@ -173,8 +172,6 @@ header{
     /* CARROSEL */
 
     .carousel-inner img{
-        
         aspect-ratio: 3 / 4;
-       
     }
 }
