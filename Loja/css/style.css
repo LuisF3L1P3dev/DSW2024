@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
 :root{
     --pink_light: #FFFDF0;
     --pink_font:#CC876A;
@@ -12,8 +14,8 @@
 
 
 *{
-    margin: 0 ;
-    border: 0 ;
+    margin: 0;
+    border: none ;
     box-sizing: border-box;
 }
 
@@ -132,6 +134,11 @@ header{
     color: var(--blue_font);
 }
 
+main{
+    max-width: var(--max_width);
+    margin: 0 auto;
+}
+
 /* ________CARROSSEL_______ */
 
 .carousel-inner img{
@@ -139,6 +146,30 @@ header{
     object-fit: cover;   /* corta a imagem proporcionalmente */
     object-position: initial; /* garante que o corte seja centralizado */
 }
+
+/* _______Produtos________ */
+
+.lancamentos{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.lancamentos>h1{
+    font-family: "Fraunces", serif;
+}
+/* Produtos */
+.produto img{
+    height: 16rem;
+    width: 16rem;
+    object-fit: cover;
+    aspect-ratio: 4/4;
+}
+
+.produto>.lancamento{
+    background-color: var(--blue_background);
+}
+
 
 /* Reponsividade menu */
 @media(max-width:900px){
