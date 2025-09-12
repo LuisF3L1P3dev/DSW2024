@@ -1,6 +1,20 @@
+:root{
+    --pink_light: #FFFDF0;
+    --pink_font:#CC876A;
+    --pink-background:#F4D9D2;
+    --blue_font: #346D9E;
+    --blue_background: #2668A2;
+    --golden_font:#CCAD6E;
+    --golden_background: #CC876A;
+
+    --max_width: 1200px;
+} 
+
+
 *{
     margin: 0;
     border: 0;
+    box-sizing: border-box;
 }
 
 a{
@@ -12,20 +26,26 @@ ol, ul {
 	list-style: none;
 }
 
+body{
+    margin: 0 auto;
+}
 /* Header */
 header{
-    background-color: #FFFDF0;
-    padding: 4rem;
+    /* background-color: #FFFDF0; */
+    background-color: var(--pink_light);
     align-items: center;
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 10px 0px;
 }
 
 .header1{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    gap: 4rem;
+    gap: 2rem;
+    padding: 1rem 0rem;
 }
 
 .logo>h1 {
@@ -36,15 +56,15 @@ header{
 
 .pesquisa{
     display: flex;
-    background-color: #F4D9D2;
+    background-color: var(--pink-background);
     padding: 0.5rem;
-    text-align: center;
-    align-items: center;
     border-radius: 0.3125rem;
 }
 
 .pesquisa>input{
-    background-color:#F4D9D2 ;
+    background-color:var(--pink-background) ;
+    outline: none;
+    width: 20rem;
 }
 
 .material-symbols-outlined{
@@ -59,7 +79,7 @@ header{
 }
 
 .conta>a>p>span{
-    color: #346D9E;
+    color: var(--blue_font);
 }
 
 .conta>a>p{
@@ -68,17 +88,35 @@ header{
 .carrinho{
     display: flex;
     gap: 0.3rem;
+    align-items: center;
+    /* position: relative; */
 }
 
-.carrinho>img{
-    height: 26px;
-    width: auto;
-
-}
-
-.carrinho>span{
+.quant_carrinho{
     background-color: #CC876A ;
     color: white;
     border-radius: 50%;
     padding: 0.3rem;
+    /* font-size: 0.8rem;
+    position:absolute;
+    right: -1.3rem; */
+}
+
+.menu_divisor{
+    border: 0.5px solid var(--pink-background);
+    max-width: var(--max_width);
+    margin: 0 auto;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    color: var(--blue_font);
+    gap: 2rem;
+    padding: 1rem 0rem;
+    text-align: center;
+}
+
+.menu>a{
+    color: var(--blue_font);
 }
