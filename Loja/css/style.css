@@ -40,12 +40,14 @@ header{
 
 .header1{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     text-align: center;
     gap: 2rem;
     padding: 1rem 0rem;
+    max-width: var(--max_width);
+    margin: 0 auto;
 }
 
 .logo>h1 {
@@ -59,21 +61,30 @@ header{
     background-color: var(--pink-background);
     padding: 0.5rem;
     border-radius: 0.3125rem;
+    flex: 0.5;
+    justify-content: space-between;
 }
 
 .pesquisa>input{
     background-color:var(--pink-background) ;
     outline: none;
-    width: 20rem;
+    max-width: 25rem;
 }
 
 .material-symbols-outlined{
-    color: #CC876A;
+    color: var(--pink_font);
+    cursor: pointer;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .conta>a{
    display: flex;
-   flex: row;
+   flex-direction: row;
    text-align: justify;
    align-items: center;
 }
@@ -83,7 +94,7 @@ header{
 }
 
 .conta>a>p{
-    color:#CC876A
+    color: var(--pink_font)
 }
 .carrinho{
     display: flex;
@@ -110,6 +121,7 @@ header{
 
 .menu{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     color: var(--blue_font);
     gap: 2rem;
@@ -119,4 +131,36 @@ header{
 
 .menu>a{
     color: var(--blue_font);
+}
+
+
+/* Reponsividade menu */
+@media(max-width:900px){
+    .header1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .conta .corrinho{
+        flex-direction: row;
+    }
+
+    /* Com Flex box */
+    /* .menu{
+        flex-direction: wrap;
+        justify-content: center;
+    }
+    
+    .menu > a {
+        flex: 1 1 45%;
+        text-align: center;
+    } */
+
+    /* Com grid */
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* duas colunas iguais */
+        gap: 1rem; 
+    }
+    
 }
