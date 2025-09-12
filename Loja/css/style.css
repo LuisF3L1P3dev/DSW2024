@@ -29,13 +29,13 @@ ol, ul {
 body{
     margin: 0 auto;
 }
-/* Header */
+/* ________HEADER________ */
 header{
     /* background-color: #FFFDF0; */
     background-color: var(--pink_light);
     align-items: center;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 10px 0px;
+    box-shadow: rgba(0, 0, 0, 0.20) 0px 0px 16px 0px;
 }
 
 .header1{
@@ -132,6 +132,8 @@ header{
 .menu>a{
     color: var(--blue_font);
 }
+
+/* ________CARROSSEL_______ */
 
 
 /* Reponsividade menu */
