@@ -151,6 +151,14 @@ main{
     object-position: initial; /* garante que o corte seja centralizado */
 }
 
+
+/* ________CONTENT________ */
+
+.content{
+    display: flex;
+    align-items: center;
+}
+
 /* _______Produtos________ */
 
 .lancamentos{
@@ -170,7 +178,7 @@ main{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .card_produto{
@@ -266,6 +274,7 @@ main{
 
     main {
         padding: 0 1rem; /* Adiciona 1rem de padding nas laterais do main */
+
     }
     /* CARROSEL */
 
@@ -284,5 +293,13 @@ main{
         margin: 1rem 0;
         border-radius: 1rem;
         aspect-ratio: 3 / 4;
+    }
+
+    /* ____CONTENT_MOBILE____ */
+    .content{
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+
     }
 }
