@@ -8,8 +8,12 @@
     --blue_background: #2668A2;
     --golden_font:#CCAD6E;
     --golden_background: #CC876A;
+    --cinza: #DEDEDE;
 
     --max_width: 1200px;
+
+    --font-logo: 'Lora', serif;
+    --font-titulo: 'Fraunces', serif;
 } 
 
 
@@ -52,7 +56,7 @@ header{
 }
 
 .logo>h1 {
-    font-family: "Lora", serif;
+    font-family: var(--font-logo);
     font-optical-sizing: auto;
     color: #BE2233;
 }
@@ -156,20 +160,80 @@ main{
 }
 
 .lancamentos>h1{
-    font-family: "Fraunces", serif;
+    font-family: var(--font-titulo);
+    color: var(--pink_font);
 }
+
 /* Produtos */
-.produto img{
-    height: 16rem;
-    width: 16rem;
+
+.content{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card_produto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: var(--cinza) 0.2rem solid;
+    border-radius: 0.5rem;  
+    max-width: 18rem;
+}
+
+.card_img{
+    width: 100%;
+    max-width: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     object-fit: cover;
     aspect-ratio: 4/4;
+    position: relative;
 }
 
-.produto>.lancamento{
-    background-color: var(--blue_background);
+.card_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
+.lancamento {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--blue_background);
+  color: white;
+  padding: 0.25rem 0.6rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: var(--font-titulo);
+}
+
+.descricao{
+    padding: 1rem;
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+.descricao>p{
+    font-family: var(--font-titulo);
+    color: var(--blue_font);
+}
+
+.nome_produto{
+    font-family: var(--font-titulo);
+    color: var(--pink_font);
+}
+
+.preco_produto{
+    font-size: 2rem;
+}
 
 /* Reponsividade menu */
 @media(max-width:900px){
