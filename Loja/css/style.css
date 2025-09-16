@@ -3,6 +3,7 @@
 :root{
     --pink_light: #FFFDF0;
     --pink_font:#CC876A;
+    --pink_background_light: #F4D9D2;
     --pink-background:#F4D9D2;
     --blue_font: #346D9E;
     --blue_background: #2668A2;
@@ -25,7 +26,7 @@
 
 a{
     text-decoration: none !important;
-    color: inherit !important;
+    color: inherit;
 }
 
 ol, ul {
@@ -286,13 +287,119 @@ section{
 
 footer{
     background-color: var(--blue_background);
+    padding: 4rem 0 0 0;
 }
 
-footer>div{
+footer>.footer_content{
     max-width: var(--max_width);
     margin: 0 auto;
 }        
 
+.footer_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding:0 0 2rem 0;
+    margin-bottom: 2rem;
+    border-bottom:  0.1rem solid var(--pink_light);
+}
+
+.cadastrar h3{
+    color: var(--pink_light);
+    font-family: var(--font-titulo);
+    margin-bottom: 0.5rem;
+}   
+
+.cadastrar p {
+    color: var(--golden_font);
+    font-size: 1.2rem;
+}
+
+.input_email {
+    display: flex;
+}
+
+.input_email input{
+    border: none;
+    padding: 0.8rem 1rem;
+    background-color: var(--pink_background_light);
+    border-radius: 0.4rem 0 0 0.4rem;
+    outline: none;
+}
+
+.input_email button{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    background-color: var(--golden_background);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0 0.4rem 0.4rem 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer_bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:2.5rem;
+}
+
+.footer_bottom h2, .footer_button h3{
+    font-family: var(--font-logo);
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer_bottom a{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-icons{
+    display: flex;
+    color: white;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.institucional h3, .atendimento h3, .pagamento h3{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: var(--font-logo);
+}
+
+.institucional a, .atendimento a{
+    color: var(--golden_font);
+}
+
+.atendimento a i{
+    font-size: 1.5rem;
+    color: white;
+}
+.pagamento{
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.pagamento img{
+    max-width: 100%;
+}
+
+.footer_end{
+    text-align: center;
+    padding: 2rem;
+    color: white;
+    font-family: var(--font-logo);
+}
 
 /* Reponsividade menu */
 @media(max-width:900px){
