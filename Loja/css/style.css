@@ -165,13 +165,13 @@ section{
 
 /* _______Produtos________ */
 
-.lancamentos{
+.lancamentos, .promocao{
     display: flex;
     justify-content: center;
     margin: 2rem;
 }
 
-.lancamentos>h1{
+.lancamentos>h1, .promocao>h1{
     font-family: var(--font-titulo);
     color: var(--pink_font);
 }
@@ -260,7 +260,7 @@ section{
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
-    aspect-ratio: 4/4;
+    aspect-ratio: 4/3.75;
 }
 
 .outros_itens img{
