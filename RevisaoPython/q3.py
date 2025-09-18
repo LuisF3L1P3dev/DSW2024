@@ -6,8 +6,10 @@ os nomes que aparecem mais de uma vez.'''
 
 
 nomes = ["Ana", "Bruno", "Carlos", "Ana", "Bruno"]
-dicionario = {}
 
-for i in nomes:
-    if i in dicionario:
-        dicionario[i]=+ 1
+dicionario = {
+    i: nomes.count(i) for i in nomes
+}
+
+print(dicionario)
+    
