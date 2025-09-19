@@ -5,11 +5,15 @@ Extra: transforme em uma list comprehension que retorna apenas
 os nomes que aparecem mais de uma vez.'''
 
 
-nomes = ["Ana", "Bruno", "Carlos", "Ana", "Bruno"]
+nomes = ["Ana", "Bruno", "Carlos", "Ana", "Bruno", 'Bruno']
 
 dicionario = {
-    i: nomes.count(i) for i in nomes
+    nome: nomes.count(nome) for nome in nomes
 }
+print('Quantidade que se repetem os nomes:\n',dicionario)
 
-print(dicionario)
-    
+repetidos = [
+    nome for nome, contagem in dicionario.items() if contagem > 1
+]
+
+print('Nomes que se repetem:\n',repetidos)
