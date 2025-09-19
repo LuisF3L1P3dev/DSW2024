@@ -47,7 +47,6 @@ class Aluno(Pessoa):
     return info_pessoa + info_aluno
 
 class Curso():
-  
   def __init__(self, nome):
     self.nome = nome
     self.list_alunos = []
@@ -56,6 +55,9 @@ class Curso():
     self.list_alunos.append(aluno)
     return 'Aluno(a) {} adicionado ao curso de {}'.format(aluno.nome, self.nome)
     
+  def listar_alunos(self):
+    for i, aluno in enumerate(self.list_alunos, start=1):
+      print(f'{i},{aluno}')
 
 p1 = Pessoa('Luis', 22, 'dantas@gmail.com')
 p2 = Pessoa('Davi', 18, 'davi@gmail.com')
@@ -66,8 +68,14 @@ print(p3,'\n')
 print(p2,'\n')
 
 a1 = Aluno('Fabio', 30, 'fabio@gmail.com', '20230001', 'Info')
+a2 = Aluno('Vagner', 25, 'Vagner@gmail.com', '20230002', 'mat')
+a3 = Aluno('Marcos', 30, 'Marcos@gmail.com', '20230003', 'Tec')
 a1.aniversario()
 print(a1.exibir_dados_aluno(),'\n')
 
+
 curso1 = Curso('Informática')
 print(curso1.add_aluno(a1))
+print(curso1.add_aluno(a2))
+print(curso1.add_aluno(a3))
+curso1.listar_alunos()
