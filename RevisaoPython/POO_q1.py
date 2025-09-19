@@ -7,6 +7,12 @@ de string. Instancie pelo menos 3 objetos e teste.'''
 Na classe Pessoa, garanta que a idade não pode ser negativa.
 Adicione um método aniversario() que aumenta a idade em 1.'''
 
+'''3 - Herança
+Crie uma classe Aluno que herda de Pessoa.
+Adicione atributos: matricula e curso.
+Adicione um método exibir_dados_aluno() 
+que mostra todas as informações (inclusive herdadas).'''
+
 class Pessoa:
   def __init__(self, nome, idade, email):
     self.nome = nome
@@ -16,17 +22,32 @@ class Pessoa:
     self.email = email
   
   def __str__(self):
-    return 'Nome:{}\nIdade:{}\nEmail:{}'.format(self.nome, str(self.idade), self.email)
+    return 'Nome:{}\nIdade:{}\nEmail:{}\n'.format(self.nome, str(self.idade), self.email)
   
   def aniversario(self):
     self.idade += 1
 
+class Aluno(Pessoa):
+  def __init__(self, nome, idade, email, matricula, curso):
+    super().__init__(nome, idade, email)
+    self.matricula = matricula
+    self.curso = curso
+  
+  def exibir_dados_aluno(self):
+    info_pessoa = super().__str__()
+    info_aluno = 'Matricula:{}\nCurso:{}\n'.format(
+      self.matricula, self.curso)
+    return info_pessoa + info_aluno
+    
+    
 p1 = Pessoa('Luis', 22, 'dantas@gmail.com')
 p2 = Pessoa('Davi', 18, 'davi@gmail.com')
 p3 = Pessoa('Lucas', 20, 'Lucas@gmail.com')
-
 p1.aniversario()
 print(p1,'\n')
 print(p3,'\n')
 print(p2,'\n')
 
+a1 = Aluno('Fabio', 30, 'fabio@gmail.com', '20230001', 'Info')
+a1.aniversario()
+print(a1.exibir_dados_aluno(),'\n')
