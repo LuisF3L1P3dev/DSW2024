@@ -13,6 +13,13 @@ Adicione atributos: matricula e curso.
 Adicione um método exibir_dados_aluno() 
 que mostra todas as informações (inclusive herdadas).'''
 
+'''4 - Composição
+Crie uma classe Curso com os atributos: nome e alunos 
+(lista de objetos Aluno).
+Crie métodos para:
+Adicionar aluno.
+Listar todos os alunos.'''
+
 class Pessoa:
   def __init__(self, nome, idade, email):
     self.nome = nome
@@ -38,8 +45,18 @@ class Aluno(Pessoa):
     info_aluno = 'Matricula:{}\nCurso:{}\n'.format(
       self.matricula, self.curso)
     return info_pessoa + info_aluno
+
+class Curso():
+  
+  def __init__(self, nome):
+    self.nome = nome
+    self.list_alunos = []
     
+  def add_aluno(self, aluno):
+    self.list_alunos.append(aluno)
+    return 'Aluno(a) {} adicionado ao curso de {}'.format(aluno.nome, self.nome)
     
+
 p1 = Pessoa('Luis', 22, 'dantas@gmail.com')
 p2 = Pessoa('Davi', 18, 'davi@gmail.com')
 p3 = Pessoa('Lucas', 20, 'Lucas@gmail.com')
@@ -51,3 +68,6 @@ print(p2,'\n')
 a1 = Aluno('Fabio', 30, 'fabio@gmail.com', '20230001', 'Info')
 a1.aniversario()
 print(a1.exibir_dados_aluno(),'\n')
+
+curso1 = Curso('Informática')
+print(curso1.add_aluno(a1))
