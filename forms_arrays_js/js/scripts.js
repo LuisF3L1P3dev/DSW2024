@@ -21,3 +21,15 @@ const renderizarProdutos = produtos.map((produto) => {
 
 containerProdutos.innerHTML = renderizarProdutos.join('');
 console.log(containerProdutos);
+
+// Formulario
+
+const meuForm = document.querySelector('#form-busca');
+
+meuForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  console.log('Formulário enviado!');
+  const campoBusca = document.querySelector('#campo-busca')
+  const elementoBuscado = campoBusca.value.toLowerCase();
+  console.log('Elemento buscado:', elementoBuscado);
+})
