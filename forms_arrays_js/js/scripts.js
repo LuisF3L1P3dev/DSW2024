@@ -9,18 +9,23 @@ const produtos = [
 
 const containerProdutos = document.querySelector('#container-produtos');
 
-const renderizarProdutos = produtos.map((produto) => {
-  return `
-    <div class = "produto">
-      <h2>${produto.nome}</h2>
-      <p>Categoria: ${produto.categoria}</p>
-      <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
-    </div>
-  `;
-});
 
-containerProdutos.innerHTML = renderizarProdutos.join('');
-console.log(containerProdutos);
+function renderizar(listaDeProdutos) {
+
+  containerProdutos.innerHTML = '';
+
+  const renderizarProdutos = listaDeProdutos.map((produto) => {
+    return `
+      <div class = "produto">
+        <h2>${produto.nome}</h2>
+        <p>Categoria: ${produto.categoria}</p>
+        <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
+      </div>
+    `;
+  });
+  containerProdutos.innerHTML = renderizarProdutos.join('');
+  console.log(containerProdutos);
+}
 
 // Formulario
 
@@ -32,4 +37,12 @@ meuForm.addEventListener('submit', (event) => {
   const campoBusca = document.querySelector('#campo-busca')
   const elementoBuscado = campoBusca.value.toLowerCase();
   console.log('Elemento buscado:', elementoBuscado);
+
+  const elementoFiltrado = produtos.filter((produto) => {
+    return produto.nome.toLowerCase().includes(elementoBuscado);
+  });
+
+  renderizar(elementoFiltrado);
 })
+
+renderizar(produtos);
