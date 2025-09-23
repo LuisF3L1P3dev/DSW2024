@@ -5,3 +5,19 @@ const produtos = [
   { id: 4, nome: 'Mesa de Jantar', categoria: 'Móveis', preco: 2500 },
   { id: 5, nome: 'Teclado Mecânico', categoria: 'Eletrônicos', preco: 450 }
 ];
+
+
+const containerProdutos = document.querySelector('#container-produtos');
+
+const renderizarProdutos = produtos.map((produto) => {
+  return `
+    <div class = "produto">
+      <h2>${produto.nome}</h2>
+      <p>Categoria: ${produto.categoria}</p>
+      <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
+    </div>
+  `;
+});
+
+containerProdutos.innerHTML = renderizarProdutos.join('');
+console.log(containerProdutos);
