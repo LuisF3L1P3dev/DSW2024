@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luz e Foco</title>
+    <link rel="stylesheet" href="style.css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <div class="cabecalho-conteudo">
+                <div class="logo">
+                    <h1>Luz e Foco</h1>
+                </div>
+                
+                <nav class="navegacao">
+                    <a href="index.html" class="link-nav">Início</a>
+                    <a href="portfolio.html" class="link-nav">Portfólio</a>
+                    <a href="destaques.html" class="link-nav">Destaques</a>
+                    <a href="sobre.html" class="link-nav">Sobre</a>
+                    <a href="contato.html" class="link-nav ativo">Contato</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-interno">
+        <div class="container">
+            <h1 class="titulo-hero">Entre em Contato</h1>
+            <p class="subtitulo-hero">Vamos conversar sobre seu próximo projeto fotográfico</p>
+        </div>
+    </section>
+
+    <section class="secao-principal">
+        <div class="container">
+            <div class="contato-grid">
+                <div class="contato-info">
+                    <h2>Informações de Contato</h2>
+                    
+                    <div class="info-item">
+                        <div class="info-icone">📞</div>
+                        <div class="info-conteudo">
+                            <h3>Telefone</h3>
+                            <p>(84) 99999-9999</p>
+                            <small>WhatsApp disponível</small>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icone">✉️</div>
+                        <div class="info-conteudo">
+                            <h3>E-mail</h3>
+                            <p><a href="mailto:contato@fotografo.com">contato@luzefoco.com</a></p>
+                            <small>Resposta em até 24h</small>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icone">📍</div>
+                        <div class="info-conteudo">
+                            <h3>Localização</h3>
+                            <p>Pau dos Ferros, RN - Brasil</p>
+                            <small>Atendo todo o alto oeste potiguar</small>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icone">🕒</div>
+                        <div class="info-conteudo">
+                            <h3>Horário de Atendimento</h3>
+                            <p>Segunda a Sexta: 9h às 18h</p>
+                            <p>Sábado: 9h às 14h</p>
+                            <small>Emergências: disponível 24h</small>
+                        </div>
+                    </div>
+
+                    <div class="redes-sociais">
+                        <h3>Redes Sociais</h3>
+                        <div class="redes-lista">
+                            <a href="#" class="rede-social">
+                                <span>📷</span>
+                                <div>
+                                    <strong>Instagram</strong>
+                                    <small>@luzefoco</small>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="rede-social">
+                                <span>📘</span>
+                                <div>
+                                    <strong>Facebook</strong>
+                                    <small>Luz e Foco</small>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="rede-social">
+                                <span>💼</span>
+                                <div>
+                                    <strong>LinkedIn</strong>
+                                    <small>Luis Emanuel Fotógrafo</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contato-formulario">
+                    <h2>Solicite um Orçamento</h2>
+                    <p>Preencha o formulário abaixo e entrarei em contato em breve</p>
+                    
+                    <form class="formulario">
+                        <div class="campo-grupo">
+                            <label for="nome">Nome Completo *</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                        </div>
+                        
+                        <div class="campo-duplo">
+                            <div class="campo-grupo">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                            </div>
+                            
+                            <div class="campo-grupo">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(84) 99999-9999">
+                            </div>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="servico">Tipo de Serviço *</label>
+                            <select id="servico" name="servico" required>
+                                <option value="">Selecione o tipo de serviço</option>
+                                <option value="retrato">Retrato Profissional</option>
+                                <option value="evento">Evento Corporativo</option>
+                                <option value="casamento">Casamento</option>
+                                <option value="comercial">Fotografia Comercial</option>
+                                <option value="moda">Ensaio de Moda</option>
+                                <option value="arquitetura">Arquitetura & Interiores</option>
+                                <option value="produto">Fotografia de Produto</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="campo-duplo">
+                            <div class="campo-grupo">
+                                <label for="data">Data Desejada</label>
+                                <input type="date" id="data" name="data">
+                            </div>
+                            
+                            <div class="campo-grupo">
+                                <label for="orcamento">Orçamento Estimado</label>
+                                <select id="orcamento" name="orcamento">
+                                    <option value="">Selecione uma faixa</option>
+                                    <option value="ate-500">Até R$ 500</option>
+                                    <option value="500-1000">R$ 500 - R$ 1.000</option>
+                                    <option value="1000-2000">R$ 1.000 - R$ 2.000</option>
+                                    <option value="2000-5000">R$ 2.000 - R$ 5.000</option>
+                                    <option value="acima-5000">Acima de R$ 5.000</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Conte-me mais sobre seu projeto, localização, número de pessoas, duração do evento, estilo desejado, etc."></textarea>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" id="newsletter">
+                                <span class="checkmark"></span>
+                                Quero receber novidades e dicas de fotografia por e-mail
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="botao-enviar">Enviar Mensagem</button>
+                        
+                        <p class="form-nota">
+                            * Campos obrigatórios. Suas informações estão seguras e não serão compartilhadas.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="servicos-resumo">
+        <div class="container">
+            <h2 class="titulo-secao">Serviços Oferecidos</h2>
+            <div class="servicos-grid">
+                <div class="servico-item">
+                    <h3>Sessões de Retrato</h3>
+                    <p>Individual, corporativo ou familiar</p>
+                    <span class="preco">A partir de R$ 350</span>
+                </div>
+                
+                <div class="servico-item">
+                    <h3>Eventos Corporativos</h3>
+                    <p>Conferências, lançamentos e networking</p>
+                    <span class="preco">A partir de R$ 800</span>
+                </div>
+                
+                <div class="servico-item">
+                    <h3>Casamentos Completos</h3>
+                    <p>Cerimônia, festa e ensaios</p>
+                    <span class="preco">A partir de R$ 2.500</span>
+                </div>
+                
+                <div class="servico-item">
+                    <h3>Fotografia Comercial</h3>
+                    <p>Produtos, empresas e campanhas</p>
+                    <span class="preco">Sob consulta</span>
+                </div>
+                
+                <div class="servico-item">
+                    <h3>Ensaios de Moda</h3>
+                    <p>Editorial, lookbook e catálogo</p>
+                    <span class="preco">A partir de R$ 1.200</span>
+                </div>
+                
+                <div class="servico-item">
+                    <h3>Arquitetura & Design</h3>
+                    <p>Interiores, exteriores e imobiliário</p>
+                    <span class="preco">A partir de R$ 600</span>
+                </div>
+            </div>
+            
+            <div class="servicos-nota">
+                <p><strong>Todos os orçamentos incluem:</strong></p>
+                <ul>
+                    <li>Tratamento profissional das imagens</li>
+                    <li>Galeria online para download</li>
+                    <li>Suporte técnico pós-entrega</li>
+                    <li>Garantia de qualidade</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-secao">
+        <div class="container">
+            <h2 class="titulo-secao">Perguntas Frequentes</h2>
+            <div class="faq-lista">
+                <div class="faq-item">
+                    <h3>Qual é o prazo de entrega das fotos?</h3>
+                    <p>O prazo varia conforme o tipo de serviço: retratos (3-5 dias), eventos (7-10 dias), casamentos (15-20 dias). Fotos preview são enviadas em 24h.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Quantas fotos são entregues?</h3>
+                    <p>A quantidade varia conforme o pacote contratado. Geralmente: retratos (20-40 fotos), eventos (100-200 fotos), casamentos (300-500 fotos), todas editadas profissionalmente.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>É possível fazer alterações nas fotos?</h3>
+                    <p>Sim! Incluo edição profissional básica em todos os pacotes. Alterações especiais podem ter custo adicional dependendo da complexidade.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Vocês atendem fora de São Paulo?</h3>
+                    <p>Sim, atendo todo o Brasil. Para locais fora da Grande São Paulo, há cobrança de taxa de deslocamento que varia conforme a distância.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Como é feito o pagamento?</h3>
+                    <p>Aceitamos PIX, transferência bancária, cartão de crédito (até 12x) e dinheiro. Sinal de 50% na contratação e restante na entrega das fotos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-grid">
+                <div class="rodape-coluna">
+                    <h3>Luz e Foco</h3>
+                    <p>Capturando momentos únicos e atemporais com paixão e profissionalismo há mais de 10 anos.</p>
+                </div>
+                
+                <div class="rodape-coluna">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="portfolio.html">Portfólio</a></li>
+                        <li><a href="destaques.html">Destaques</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="rodape-coluna">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li>Retratos Profissionais</li>
+                        <li>Eventos Corporativos</li>
+                        <li>Casamentos</li>
+                        <li>Fotografia Comercial</li>
+                        <li>Arquitetura & Design</li>
+                    </ul>
+                </div>
+                
+                <div class="rodape-coluna">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li>(84) 99999-9999</li>
+                        <li><a href="mailto:contato@fotografo.com">contato@luzefoco.com</a></li>
+                        <li>Pau dos Ferros, RN - Brasil</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="rodape-copyright">
+                <p>&copy; 2025 Luz e Foco. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
