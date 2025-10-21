@@ -13,3 +13,6 @@ def portfolio(request):
 
 def destaques(request):
    return render(request, 'paginas/destaques.html')
+
+def sobre(request):
+   return render(request, 'paginas/sobre.html')

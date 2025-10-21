@@ -1,30 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luz e Foco</title>
-    <link rel="stylesheet" href="style.css/style.css">
-</head>
-<body>
-    <header class="cabecalho">
-        <div class="container">
-            <div class="cabecalho-conteudo">
-                <div class="logo">
-                    <h1>Luz e Foco</h1>
-                </div>
-                
-                <nav class="navegacao">
-                    <a href="index.html" class="link-nav">Início</a>
-                    <a href="portfolio.html" class="link-nav">Portfólio</a>
-                    <a href="destaques.html" class="link-nav">Destaques</a>
-                    <a href="sobre.html" class="link-nav">Sobre</a>
-                    <a href="contato.html" class="link-nav ativo">Contato</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+{% extends "base.html" %}
+{% load static %}
 
+{% block main %}
     <section class="hero-interno">
         <div class="container">
             <h1 class="titulo-hero">Entre em Contato</h1>
@@ -269,51 +246,6 @@
             </div>
         </div>
     </section>
-
-    <footer class="rodape">
-        <div class="container">
-            <div class="rodape-grid">
-                <div class="rodape-coluna">
-                    <h3>Luz e Foco</h3>
-                    <p>Capturando momentos únicos e atemporais com paixão e profissionalismo há mais de 10 anos.</p>
-                </div>
-                
-                <div class="rodape-coluna">
-                    <h3>Navegação</h3>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="portfolio.html">Portfólio</a></li>
-                        <li><a href="destaques.html">Destaques</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                    </ul>
-                </div>
-                
-                <div class="rodape-coluna">
-                    <h3>Serviços</h3>
-                    <ul>
-                        <li>Retratos Profissionais</li>
-                        <li>Eventos Corporativos</li>
-                        <li>Casamentos</li>
-                        <li>Fotografia Comercial</li>
-                        <li>Arquitetura & Design</li>
-                    </ul>
-                </div>
-                
-                <div class="rodape-coluna">
-                    <h3>Contato</h3>
-                    <ul>
-                        <li>(84) 99999-9999</li>
-                        <li><a href="mailto:contato@fotografo.com">contato@luzefoco.com</a></li>
-                        <li>Pau dos Ferros, RN - Brasil</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="rodape-copyright">
-                <p>&copy; 2025 Luz e Foco. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+{% endblock main %}
 </body>
 </html>
