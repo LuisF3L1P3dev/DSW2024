@@ -10,3 +10,6 @@ def base(request):
 
 def portfolio(request):
    return render(request, 'paginas/portfolio.html')
+
+def destaques(request):
+   return render(request, 'paginas/destaques.html')
