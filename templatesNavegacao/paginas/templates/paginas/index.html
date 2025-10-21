@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -72,7 +73,7 @@
                     <a href="sobre.html" class="botao-principal">Conhecer Mais</a>
                 </div>
                 <div class="sobre-imagem">
-                    <img src="imagens/pexels-kyleloftusstudios-11745675.jpg" alt="Fotógrafo profissional">
+                    <img src= "{% static "./imagens/pexels-kyleloftusstudios-11745675.jpg" %}" alt="Fotógrafo profissional">
                 </div>
             </div>
         </div>
@@ -85,7 +86,7 @@
             
             <div class="galeria-grid">
                 <div class="foto-item">
-                    <img src="imagens/pexels-rdne-7648047.jpg" alt="Evento corporativo">
+                    <img src=" {% static "imagens/pexels-rdne-7648047.jpg" %} " alt="Evento corporativo">
                     <div class="foto-info">
                         <h3 class="foto-titulo">Eventos Corporativos</h3>
                         <p class="foto-descricao">Cobertura profissional de eventos empresariais</p>
@@ -93,7 +94,7 @@
                 </div>
                 
                 <div class="foto-item">
-                    <img src="imagens/pexels-ron-lach-10032940.jpg" alt="Retrato de família">
+                    <img src=" {% static "imagens/pexels-ron-lach-10032940.jpg" %} " alt="Retrato de família">
                     <div class="foto-info">
                         <h3 class="foto-titulo">Retratos de Família</h3>
                         <p class="foto-descricao">Momentos especiais em família</p>
@@ -101,7 +102,7 @@
                 </div>
                 
                 <div class="foto-item">
-                    <img src="imagens/pexels-jayrinho-22742253.jpg" alt="Fashion photography">
+                    <img src=" {% static "imagens/pexels-jayrinho-22742253.jpg" %} " alt="Fashion photography">
                     <div class="foto-info">
                         <h3 class="foto-titulo">Fashion & Estilo</h3>
                         <p class="foto-descricao">Ensaios de moda com iluminação dramática</p>
